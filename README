@@ -1,0 +1,27 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3744
+
+This script is a modification of the venerable vimfootnotes (vimscript #431), for use with extended markdown. The most recent version is available on github:
+
+https://github.com/vim-pandoc/vim-markdownfootnotes/
+
+The original vimfootnotes inserts footnotes that look like this:
+
+    Here is some text.[1]
+
+    [1] Here is a note.
+
+The new script inserts footnotes in the widely supported extended markdown syntax,
+
+    Here is some text.[^1]
+
+    [^1]: Here is a note.
+
+The original script inserts footnotes at the end of the file or before an email sig line, if there is one. The new script inserts all footnotes at the end of the file.
+
+The script defines two mappings,
+
+    <Leader>f    Insert new footnote 
+    <Leader>r    Return from footnote
+
+To insert a footnote, type f. A footnote mark will be inserted after the cursor. A matching footnote mark will be inserted at the end of the file. A new buffer will open in a split window at the bottom of your screen, ready to edit the new footnote. When you are done, type r to close the split and return to the main text.
+
